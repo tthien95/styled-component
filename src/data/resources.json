@@ -1,0 +1,62 @@
+[
+  {
+    "node": {
+      "id": "85d5c0bd-1bd0-5edd-8a2e-138ff884cabf",
+      "timeToRead": 1,
+      "html": "<p>The basic unemployment allowance is payable for a maximum period of 400 days. If your employment history is less than three years, the maximum payment period is 300 days. If you are still unemployed when the allowance runs out, you can apply for labor market subsidy.</p>\n<p>The unemployment allowance is payable for a maximum of 500 days for unemployed people 58 years old and older. Ageing unemployed people who satisfy the work requirement are eligible for additional days of unemployment allowance and can take advantage of a kind of unemployment path to retirement. For more information, click <a href=\"https://www.kela.fi/web/en/basic-unemployment-allowance\">here</a>.</p>",
+      "excerpt": "The basic unemployment allowance is payable for a maximum period of 400 days. If your employment history is less than three years, the maximum payment period is 300 days. If you are still unemployed when the allowance runs out, you can apply for labor market subsidy. The unemployment allowance is payable for a maximum of 500 days for unemployed people 58 years old and older. Ageing unemployed…",
+      "frontmatter": {
+        "author": "Kayla Gordon",
+        "slug": "how-long-can-i-receive-kela-unemployment-benefits",
+        "title": "How long can I receive Kela unemployment benefits?",
+        "tags": ["Unemployment Benefits"],
+        "date": "2020-05-03",
+        "source": ["Kela"],
+        "resourceType": "jobSeeker"
+      },
+      "internal": {
+        "content": "\nThe basic unemployment allowance is payable for a maximum period of 400 days. If your employment history is less than three years, the maximum payment period is 300 days. If you are still unemployed when the allowance runs out, you can apply for labor market subsidy.\n\nThe unemployment allowance is payable for a maximum of 500 days for unemployed people 58 years old and older. Ageing unemployed people who satisfy the work requirement are eligible for additional days of unemployment allowance and can take advantage of a kind of unemployment path to retirement. For more information, click [here](https://www.kela.fi/web/en/basic-unemployment-allowance).\n"
+      }
+    }
+  },
+  {
+    "node": {
+      "id": "6d793f6f-5c6b-5ffc-a06f-87fc1b7df46b",
+      "timeToRead": 1,
+      "html": "<p>Unemployment benefits are taxable income, and a preliminary tax of 20% is withheld on them.</p>\n<p>Even if the unemployment allowance is lower than the wage, the rate of tax may not necessarily be lower. The reason for this is that it is not possible to make the same tax deductions from the allowance as from the salary.</p>\n<p>You can apply for a revised tax card for social security benefits from Vero (the Tax Administration). Vero will, on request, send the revised tax card directly to Kela. If you have any questions, please visit your local Kela office. To read more about taxes, click <a href=\"https://www.kela.fi/web/en/taxation-of-unemployment-benefits\">here</a>.</p>",
+      "excerpt": "Unemployment benefits are taxable income, and a preliminary tax of 20% is withheld on them. Even if the unemployment allowance is lower than the wage, the rate of tax may not necessarily be lower. The reason for this is that it is not possible to make the same tax deductions from the allowance as from the salary. You can apply for a revised tax card for social security benefits from Vero (the Tax…",
+      "frontmatter": {
+        "author": "Kayla Gordon",
+        "slug": "how-will-unemployment-affect-my-taxes",
+        "title": "How will unemployment affect my taxes?",
+        "tags": ["Taxes"],
+        "date": "2020-05-03",
+        "source": ["Kela"],
+        "resourceType": "jobSeeker"
+      },
+      "internal": {
+        "content": "\nUnemployment benefits are taxable income, and a preliminary tax of 20% is withheld on them.\n\nEven if the unemployment allowance is lower than the wage, the rate of tax may not necessarily be lower. The reason for this is that it is not possible to make the same tax deductions from the allowance as from the salary.\n\nYou can apply for a revised tax card for social security benefits from Vero (the Tax Administration). Vero will, on request, send the revised tax card directly to Kela. If you have any questions, please visit your local Kela office. To read more about taxes, click [here](https://www.kela.fi/web/en/taxation-of-unemployment-benefits).\n"
+      }
+    }
+  },
+  {
+    "node": {
+      "id": "816b80c7-afcb-58d0-8b32-b3ed03b8947e",
+      "timeToRead": 1,
+      "html": "<p>We couldn’t find any official list of steps to take once a person becomes unemployed, but here are some suggestions.</p>\n<ol>\n<li>Register with the TE Office (TE Palvelut) as an unemployed job seeker.</li>\n<li>Apply for unemployment benefits from Kela.</li>\n<li>Apply to jobs in your area of expertise.</li>\n<li>Network as much as you can.</li>\n</ol>",
+      "excerpt": "We couldn’t find any official list of steps to take once a person becomes unemployed, but here are some suggestions. Register with the TE Office (TE Palvelut) as an unemployed job seeker. Apply for unemployment benefits from Kela. Apply to jobs in your area of expertise. Network as much as you can.",
+      "frontmatter": {
+        "author": "Kayla Gordon",
+        "slug": "im-unemployed-what-should-i-do",
+        "title": "I'm unemployed. What should I do?",
+        "tags": ["Unemployment"],
+        "date": "2020-05-03",
+        "source": ["Earner"],
+        "resourceType": "jobSeeker"
+      },
+      "internal": {
+        "content": "\nWe couldn't find any official list of steps to take once a person becomes unemployed, but here are some suggestions.\n\n1. Register with the TE Office (TE Palvelut) as an unemployed job seeker.\n\n2. Apply for unemployment benefits from Kela.\n\n3. Apply to jobs in your area of expertise.\n\n4. Network as much as you can.\n"
+      }
+    }
+  }
+]
