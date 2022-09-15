@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Button } from './Button';
 import { size, Card } from './Container';
+import { Link } from 'react-router-dom';
 
 const Content = styled.p`
   margin-bottom: 30px;
@@ -15,7 +16,7 @@ const Source = styled.small`
   margin-bottom: 15px;
 `;
 
-const CardButton = styled(Button)`
+const CardButton = styled(Button.withComponent(Link))`
   font-size: 16px;
   @media (max-width: ${size.mobileL}) {
     margin-left: 27%;

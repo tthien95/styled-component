@@ -17,7 +17,7 @@ const NewsWrap = styled.div`
   margin: 0 auto;
 `;
 
-const NewsButton = styled(Button.withComponent('button'))`
+const NewsButton = styled(Button)`
   margin: auto;
   margin-top: 30px;
 `;

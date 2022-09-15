@@ -1,11 +1,10 @@
 import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
 
 interface IButtonProps {
   colorVar?: string;
 }
 
-export const Button = styled(Link)<IButtonProps>`
+export const Button = styled.button<IButtonProps>`
   background: ${(props) =>
     props.colorVar ? css`var(${props.colorVar})` : css`var(--darkBlue)`};
   border-color: ${(props) =>
