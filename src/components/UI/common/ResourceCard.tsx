@@ -1,27 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Button } from './Button';
-import { size } from './Container';
-
-const Card = styled.div`
-  box-sizing: border-box;
-  text-decoration: none;
-  margin-bottom: 50px;
-  padding: 0 20px;
-
-  @media (min-width: ${size.mobileS}) {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  @media (min-width: ${size.tablet}) {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-  @media (min-width: ${size.laptop}) {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-  }
-`;
+import { size, Card } from './Container';
 
 const Content = styled.p`
   margin-bottom: 30px;

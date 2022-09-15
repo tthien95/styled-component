@@ -1,4 +1,10 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
+import { size, Card } from './common/Container';
+import NewsLetterFooter from './common/NewsLetterFooter';
+import GitHubSocial from '../../static/icons/GitHubSocial';
+import TwitterSocial from '../../static/icons/TwitterSocial';
 
 const FooterContainer = styled.div`
   padding: 20px;
@@ -27,10 +33,47 @@ const Column = styled.div`
   max-width: 1440px;
 `;
 
+const Cell = styled(Card)`
+ @media (min-width: ${size.mobileS}) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  @media (min-width: ${size.tablet}) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  @media (min-width: ${size.laptop}) {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+`;
+
+const Logo = styled(Link)`
+  color: var(--text);
+  text-transform: none;
+`;
 const Footer = () => {
   return (
     <FooterContainer>
-      <Column>Footer</Column>
+      <Column>
+        <Cell>
+          <Logo to="/">
+            <h3>Earner</h3>
+          </Logo>
+        </Cell>
+        <Cell>
+          <NewsLetterFooter />
+        </Cell>
+        <Cell>
+          <h3>Follow Us</h3>
+          <a href="https://github.com/Earner-ai/" target="_new">
+            <GitHubSocial />
+          </a>
+          <a href="https://twitter.com/earner_ai" target="_new">
+            <TwitterSocial />
+          </a>
+        </Cell>
+      </Column>
     </FooterContainer>
   );
 };

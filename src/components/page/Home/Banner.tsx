@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import bannerImg from '../../../static/images/office-phone.png';
 
-import { Container, size } from '../../UI/common/Container';
+import { PlainContainer, size } from '../../UI/common/Container';
 
 const Background = styled.div`
   background-image: url(${bannerImg});
@@ -20,7 +20,7 @@ const Overlay = styled.div`
   background-color: rgba(2, 38, 64, 0.4);
 `;
 
-const TextContainer = styled(Container)`
+const TextContainer = styled(PlainContainer)`
   padding: 200px 20px;
   color: white;
 `;

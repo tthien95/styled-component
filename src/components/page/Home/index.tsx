@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Banner from './Banner';
-import { Container, Resources } from '../../UI/common/Container';
+import { PlainContainer, Resources } from '../../UI/common/Container';
 import ResourceCard from '../../UI/common/ResourceCard';
 import resourceData from '../../../data/resources.json';
 import GitHub from '../../../static/icons/GitHub';
@@ -20,7 +20,7 @@ const H1 = styled.h1`
   margin: 50px 0;
 `;
 
-const ContentContainer = styled.div`
+const TextContainer = styled.div`
   max-width: 50rem;
   line-height: 1.5rem;
   margin: 0px auto 50px auto;
@@ -37,7 +37,7 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <Container>
+      <PlainContainer>
         <H1_UPPER>Stay informed with Earner</H1_UPPER>
         <P>
           Learn about services you&apos;re entitled to from the Finnish
@@ -58,7 +58,7 @@ const Home = () => {
         </Resources>
 
         <H1>For the people, by the people</H1>
-        <ContentContainer>
+        <TextContainer>
           <P>
             Earner was created by people who have struggled with the job market
             and lack of knowledge regarding resources available to them. At
@@ -74,8 +74,8 @@ const Home = () => {
           <GitHubLink href="https://github.com/Earner-ai/" target="_new">
             <GitHub />
           </GitHubLink>
-        </ContentContainer>
-      </Container>
+        </TextContainer>
+      </PlainContainer>
     </>
   );
 };

@@ -10,7 +10,7 @@ export const size = {
   desktop: '2560px',
 };
 
-export const Container = styled.div`
+export const PlainContainer = styled.div`
   position: relative;
   width: 100%;
   max-width: 1440px;
@@ -46,5 +46,25 @@ export const Resources = styled.div`
     p {
       text-align: justify;
     }
+  }
+`;
+
+export const Card = styled.div`
+  box-sizing: border-box;
+  text-decoration: none;
+  margin-bottom: 50px;
+  padding: 0 20px;
+
+  @media (min-width: ${size.mobileS}) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  @media (min-width: ${size.tablet}) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  @media (min-width: ${size.laptop}) {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
   }
 `;
