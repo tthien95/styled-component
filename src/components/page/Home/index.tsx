@@ -1,23 +1,14 @@
-import styled from 'styled-components';
+import 'styled-components/macro';
+
+import styled, { css } from 'styled-components';
 import Banner from './Banner';
 import { PlainContainer, Resources } from '../../UI/common/Container';
 import ResourceCard from '../../UI/common/ResourceCard';
 import resourceData from '../../../data/resources.json';
 import GitHub from '../../../static/icons/GitHub';
 
-const H1_UPPER = styled.h1`
-  text-align: center;
-  color: var(--softRed);
-  margin: 50px 0;
-`;
-
 const P = styled.p`
   text-align: center;
-`;
-
-const H1 = styled.h1`
-  text-align: center;
-  margin: 50px 0;
 `;
 
 const TextContainer = styled.div`
@@ -38,7 +29,15 @@ const Home = () => {
     <>
       <Banner />
       <PlainContainer>
-        <H1_UPPER>Stay informed with Earner</H1_UPPER>
+        <h1
+          css={css`
+            text-align: center;
+            color: var(--softRed);
+            margin: 50px 0;
+          `}
+        >
+          Stay informed with Earner
+        </h1>
         <P>
           Learn about services you&apos;re entitled to from the Finnish
           government.
@@ -57,7 +56,14 @@ const Home = () => {
           ))}
         </Resources>
 
-        <H1>For the people, by the people</H1>
+        <h1
+          css={`
+            text-align: center;
+            margin: 50px 0;
+          `}
+        >
+          For the people, by the people
+        </h1>
         <TextContainer>
           <P>
             Earner was created by people who have struggled with the job market

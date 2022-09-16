@@ -1,3 +1,5 @@
+import 'styled-components/macro';
+
 import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { links as navLinks } from './common/navLink';
@@ -21,15 +23,6 @@ const LogoWrap = styled.div`
   }
 `;
 
-const Logo = styled(Link)`
-  text-decoration: none;
-  color: var(--darkBlue);
-  vertical-align: sub;
-`;
-
-const H2 = styled.h2`
-  text-transform: lowercase;
-`;
 const NavBar = styled.ul`
   display: flex;
   flex-direction: row;
@@ -72,9 +65,22 @@ const Header = () => {
   return (
     <HeaderContainer>
       <LogoWrap>
-        <Logo to="/">
-          <H2>earner</H2>
-        </Logo>
+        <Link
+          to="/"
+          css={`
+            text-decoration: none;
+            color: var(--darkBlue);
+            vertical-align: sub;
+          `}
+        >
+          <h2
+            css={`
+              text-transform: lowercase;
+            `}
+          >
+            earner
+          </h2>
+        </Link>
       </LogoWrap>
 
       <NavBar>

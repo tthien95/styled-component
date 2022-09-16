@@ -1,3 +1,5 @@
+import 'styled-components/macro';
+
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -34,7 +36,7 @@ const Column = styled.div`
 `;
 
 const Cell = styled(Card)`
- @media (min-width: ${size.mobileS}) {
+  @media (min-width: ${size.mobileS}) {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -48,18 +50,20 @@ const Cell = styled(Card)`
   }
 `;
 
-const Logo = styled(Link)`
-  color: var(--text);
-  text-transform: none;
-`;
 const Footer = () => {
   return (
     <FooterContainer>
       <Column>
         <Cell>
-          <Logo to="/">
+          <Link
+            to="/"
+            css={`
+              color: var(--text);
+              text-transform: none;
+            `}
+          >
             <h3>Earner</h3>
-          </Logo>
+          </Link>
         </Cell>
         <Cell>
           <NewsLetterFooter />

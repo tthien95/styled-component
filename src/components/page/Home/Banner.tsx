@@ -1,3 +1,5 @@
+import 'styled-components/macro';
+
 import styled from 'styled-components';
 import bannerImg from '../../../static/images/office-phone.png';
 
@@ -20,11 +22,6 @@ const Overlay = styled.div`
   background-color: rgba(2, 38, 64, 0.4);
 `;
 
-const TextContainer = styled(PlainContainer)`
-  padding: 200px 20px;
-  color: white;
-`;
-
 const Text = styled.div`
   width: 50%;
   @media (max-width: ${size.mobileL}) {
@@ -37,7 +34,12 @@ const Banner = () => {
   return (
     <Background>
       <Overlay>
-        <TextContainer>
+        <PlainContainer
+          css={`
+            padding: 200px 20px;
+            color: white;
+          `}
+        >
           <Text>
             <h1>Serving the Finnish employment community.</h1>
             <h3>
@@ -45,7 +47,7 @@ const Banner = () => {
               employee, or entrepreneur.
             </h3>
           </Text>
-        </TextContainer>
+        </PlainContainer>
       </Overlay>
     </Background>
   );

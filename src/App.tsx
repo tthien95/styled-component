@@ -1,3 +1,5 @@
+import type {} from 'styled-components/cssprop'
+
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/UI/layout';
 import Home from './components/page/Home';
