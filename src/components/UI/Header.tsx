@@ -3,6 +3,8 @@ import 'styled-components/macro';
 import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { links as navLinks } from './common/navLink';
+import { size } from './common/Container';
+import MobileHeader from './MobileHeader';
 
 const HeaderContainer = styled.header`
   display: flex;
@@ -18,9 +20,9 @@ const LogoWrap = styled.div`
     width: 5rem;
   }
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: ${size.tablet}) {
     display: none;
-  }
+  } */
 `;
 
 const NavBar = styled.ul`
@@ -29,7 +31,7 @@ const NavBar = styled.ul`
   padding: 0rem 1rem;
   margin: 20px 20px 0px 20px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${size.tablet}) {
     display: none;
   }
 `;
@@ -37,18 +39,6 @@ const NavBar = styled.ul`
 const Li = styled.li`
   list-style: none;
 
-  @media (min-width: 320px) {
-    font-size: 0.9rem;
-  }
-  @media (min-width: 768px) {
-    font-size: 1rem;
-    margin-left: 1.5rem;
-  }
-`;
-
-const NavBarLink = styled(NavLink)`
-  transition: 0.2s opacity cubic-bezier(0.075, 0.82, 0.165, 1);
-  color: var(--text);
   &:hover {
     opacity: 0.7;
     border-bottom: 5px solid var(--green);
@@ -59,6 +49,19 @@ const NavBarLink = styled(NavLink)`
     border-bottom: 5px solid var(--green);
     padding-bottom: 10px;
   }
+
+  @media (min-width: ${size.mobileS}) {
+    font-size: 0.9rem;
+  }
+  @media (min-width: ${size.tablet}) {
+    font-size: 1rem;
+    margin-left: 1.5rem;
+  }
+`;
+
+const NavBarLink = styled(NavLink)`
+  transition: 0.2s opacity cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: var(--text);
 `;
 
 const Header = () => {
@@ -90,6 +93,7 @@ const Header = () => {
           </Li>
         ))}
       </NavBar>
+      <MobileHeader/>
     </HeaderContainer>
   );
 };
