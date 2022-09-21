@@ -1,7 +1,7 @@
 import 'styled-components/macro';
 import styled, { css, keyframes } from 'styled-components';
 
-import React, { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { links as navLinks } from './navLink';
 import CloseX from '../../../static/icons/CloseX';
