@@ -1,7 +1,7 @@
 import 'styled-components/macro';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { links as navLinks } from './navLink';
 import CloseX from '../../../static/icons/CloseX';
@@ -11,10 +11,37 @@ interface ISideDrawerProps {
   toggle: () => void;
 }
 
-const SideDrawerWrap = styled.nav<{
-  show: boolean;
-  children?: React.ReactNode;
-}>`
+const moveIn = keyframes`
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+`;
+
+const moveOut = keyframes`
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+`;
+
+const moveInClass = css`
+  animation: ${moveIn} 0.3s ease-out;
+  animation-fill-mode: forwards;
+`;
+
+const moveOutClass = css`
+  animation: ${moveOut} 0.3s ease-in;
+  animation-fill-mode: forwards;
+`;
+
+const SideDrawerWrap = styled.nav`
   background-color: var(--grey);
   height: 100%;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
@@ -25,9 +52,6 @@ const SideDrawerWrap = styled.nav<{
   max-width: 400px;
   z-index: 500;
   overflow: hidden;
-  transition: transform 0.3s ${({ show }) => (show ? 'ease-in' : 'ease-out')};
-  transform: ${({ show }) =>
-    show ? css`translateX(0%)` : css`translateX(-100%)`};
 `;
 
 const UL = styled.ul`
@@ -53,12 +77,25 @@ const ClickLink = styled(NavLink)`
 `;
 
 const SideDrawer: FC<ISideDrawerProps> = ({ show, toggle }) => {
+  const [shouldRender, setShouldRender] = useState(false);
+
+  useEffect(() => {
+    if (show) setShouldRender(true);
+  }, [show]);
+
+  const handleAnimationEnd = () => {
+    if (!show) setShouldRender(false);
+  };
+
   const handleClick = () => {
     toggle();
   };
 
-  return (
-    <SideDrawerWrap show={show}>
+  return shouldRender ? (
+    <SideDrawerWrap
+      css={show ? moveInClass : moveOutClass}
+      onAnimationEnd={handleAnimationEnd}
+    >
       <div
         onClick={handleClick}
         css={`
@@ -100,7 +137,7 @@ const SideDrawer: FC<ISideDrawerProps> = ({ show, toggle }) => {
         ))}
       </UL>
     </SideDrawerWrap>
-  );
+  ) : null;
 };
 
 export default SideDrawer;
