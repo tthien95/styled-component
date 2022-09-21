@@ -2,9 +2,10 @@ import 'styled-components/macro';
 import styled, { css, keyframes } from 'styled-components';
 
 import { FC, useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { links as navLinks } from './navLink';
 import CloseX from '../../../static/icons/CloseX';
+import BrandName from './BrandName';
 
 interface ISideDrawerProps {
   show: boolean;
@@ -111,16 +112,7 @@ const SideDrawer: FC<ISideDrawerProps> = ({ show, toggle }) => {
           margin: 50px auto 0px;
         `}
       >
-        <Link to="/" title="earner">
-          <h2
-            css={`
-              text-transform: none;
-              color: var(--darkBlue);
-            `}
-          >
-            earner
-          </h2>
-        </Link>
+        <BrandName />
       </div>
 
       <UL>

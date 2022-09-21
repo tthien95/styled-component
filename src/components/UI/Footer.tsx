@@ -1,12 +1,12 @@
 import 'styled-components/macro';
 
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { size, Card } from './common/Container';
 import NewsLetterFooter from './common/NewsLetterFooter';
 import GitHubSocial from '../../static/icons/GitHubSocial';
 import TwitterSocial from '../../static/icons/TwitterSocial';
+import BrandName from './common/BrandName';
 
 const FooterContainer = styled.div`
   padding: 20px;
@@ -55,15 +55,7 @@ const Footer = () => {
     <FooterContainer>
       <Column>
         <Cell>
-          <Link
-            to="/"
-            css={`
-              color: var(--text);
-              text-transform: none;
-            `}
-          >
-            <h3>Earner</h3>
-          </Link>
+          <BrandName>Earner</BrandName>
         </Cell>
         <Cell>
           <NewsLetterFooter />

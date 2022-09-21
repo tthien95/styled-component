@@ -1,10 +1,11 @@
 import 'styled-components/macro';
 
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { links as navLinks } from './common/navLink';
 import { size } from './common/Container';
 import MobileHeader from './MobileHeader';
+import BrandName from './common/BrandName';
 
 const HeaderContainer = styled.header`
   display: flex;
@@ -19,10 +20,6 @@ const LogoWrap = styled.div`
   img {
     width: 5rem;
   }
-
-  /* @media screen and (max-width: ${size.tablet}) {
-    display: none;
-  } */
 `;
 
 const NavBar = styled.ul`
@@ -68,22 +65,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <LogoWrap>
-        <Link
-          to="/"
-          css={`
-            text-decoration: none;
-            color: var(--darkBlue);
-            vertical-align: sub;
-          `}
-        >
-          <h2
-            css={`
-              text-transform: lowercase;
-            `}
-          >
-            earner
-          </h2>
-        </Link>
+        <BrandName />
       </LogoWrap>
 
       <NavBar>
@@ -93,7 +75,7 @@ const Header = () => {
           </Li>
         ))}
       </NavBar>
-      <MobileHeader/>
+      <MobileHeader />
     </HeaderContainer>
   );
 };
